@@ -1,0 +1,25 @@
+{
+  "type": "application",
+  "title": "Line Report",
+  "version": "1.4",
+  "initialRoute": "/",
+  "routes": { "/": "ui://pages/report" },
+  "theme": {
+    "mode": "light",
+    "color": {
+      "primary": "#1f5f8b", "onPrimary": "#ffffff",
+      "primaryContainer": "#d8e8f4", "onPrimaryContainer": "#0d2c42",
+      "secondary": "#5b6b78", "onSecondary": "#ffffff",
+      "surface": "#ffffff", "onSurface": "#141a1f",
+      "surfaceVariant": "#e6ebef", "surfaceContainerHighest": "#eef1f4",
+      "onSurfaceVariant": "#66727d",
+      "outline": "#d5dde3", "outlineVariant": "#e8edf1",
+      "error": "#b3261e", "onError": "#ffffff",
+      "warning": "#a06a06", "onWarning": "#ffffff",
+      "success": "#2f6b3a",
+      "inverseSurface": "#131a20", "inverseOnSurface": "#eef1f4"
+    },
+    "spacing": { "xxs": 2, "xs": 4, "sm": 8, "md": 16, "lg": 24, "xl": 32, "2xl": 48 },
+    "shape": { "none": 0, "extraSmall": 4, "small": 8, "medium": 12, "large": 16, "extraLarge": 28, "full": 999 }
+  }
+}
