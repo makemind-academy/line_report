@@ -180,184 +180,111 @@
     }
   },
   "content": {
-    "type": "container",
-    "decoration": {
-      "color": "{{theme.color.surfaceContainerHighest}}"
+    "type": "mediaQuery",
+    "condition": {
+      "minWidth": 840
     },
-    "child": {
-      "type": "linear",
-      "direction": "vertical",
-      "children": [
-        {
-          "type": "container",
-          "padding": {
-            "left": 24,
-            "right": 24,
-            "top": 20,
-            "bottom": 16
-          },
-          "decoration": {
-            "color": "{{theme.color.surface}}",
-            "border": {
-              "bottom": true,
-              "color": "{{theme.color.outline}}",
-              "width": 1
-            }
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "center",
-            "children": [
-              {
-                "type": "linear",
-                "direction": "vertical",
-                "children": [
-                  {
-                    "type": "text",
-                    "content": "{{lineId}}",
-                    "style": {
-                      "fontSize": 12,
-                      "letterSpacing": 2.2,
-                      "color": "{{theme.color.onSurfaceVariant}}"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "content": "Shift handover report",
-                    "style": {
-                      "fontSize": 21,
-                      "fontWeight": "bold",
-                      "color": "{{theme.color.onSurface}}"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "expanded",
-                "child": {
-                  "type": "box",
-                  "height": 1
-                }
-              },
-              {
-                "type": "linear",
-                "direction": "vertical",
-                "crossAxisAlignment": "end",
-                "children": [
-                  {
-                    "type": "text",
-                    "content": "{{shift}}",
-                    "style": {
-                      "fontSize": 13,
-                      "color": "{{theme.color.onSurface}}"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "content": "{{takenAt}}",
-                    "style": {
-                      "fontSize": 12,
-                      "color": "{{theme.color.onSurfaceVariant}}"
-                    }
-                  }
-                ]
+    "then": {
+      "type": "container",
+      "decoration": {
+        "color": "{{theme.color.surfaceContainerHighest}}"
+      },
+      "child": {
+        "type": "linear",
+        "direction": "vertical",
+        "children": [
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 20,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "bottom": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
               }
-            ]
-          }
-        },
-        {
-          "type": "container",
-          "height": 300,
-          "padding": {
-            "left": 20,
-            "right": 20,
-            "top": 18
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "stretch",
-            "children": [
-              {
-                "type": "container",
-                "padding": {
-                  "all": 16
-                },
-                "decoration": {
-                  "color": "{{theme.color.surface}}",
-                  "borderRadius": 12,
-                  "border": {
-                    "color": "{{theme.color.outline}}",
-                    "width": 1
-                  }
-                },
-                "child": {
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
                   "type": "linear",
                   "direction": "vertical",
                   "children": [
                     {
                       "type": "text",
-                      "content": "LINE UPTIME",
+                      "content": "{{lineId}}",
                       "style": {
-                        "fontSize": 11,
-                        "letterSpacing": 1.8,
+                        "fontSize": 12,
+                        "letterSpacing": 2.2,
                         "color": "{{theme.color.onSurfaceVariant}}"
                       }
                     },
                     {
-                      "type": "box",
-                      "height": 6
-                    },
-                    {
-                      "type": "gauge",
-                      "value": "{{uptime}}",
-                      "min": 0,
-                      "max": 100,
-                      "size": 190,
-                      "strokeWidth": 16,
-                      "labelFormat": "{value}%",
-                      "segments": [
-                        {
-                          "from": 0,
-                          "to": 70,
-                          "color": "{{theme.color.error}}"
-                        },
-                        {
-                          "from": 70,
-                          "to": 88,
-                          "color": "{{theme.color.warning}}"
-                        },
-                        {
-                          "from": 88,
-                          "to": 100,
-                          "color": "{{theme.color.success}}"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "height": 4
-                    },
-                    {
                       "type": "text",
-                      "content": "Target 88 % — below that the shift owes an explanation at handover",
+                      "content": "Shift handover report",
                       "style": {
-                        "fontSize": 11,
-                        "color": "{{theme.color.onSurfaceVariant}}"
+                        "fontSize": 21,
+                        "fontWeight": "bold",
+                        "color": "{{theme.color.onSurface}}"
                       }
                     }
                   ]
                 },
-                "width": 280
-              },
-              {
-                "type": "box",
-                "width": 16
-              },
-              {
-                "type": "expanded",
-                "child": {
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "box",
+                    "height": 1
+                  }
+                },
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "crossAxisAlignment": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "content": "{{shift}}",
+                      "style": {
+                        "fontSize": 13,
+                        "color": "{{theme.color.onSurface}}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "content": "{{takenAt}}",
+                      "style": {
+                        "fontSize": 12,
+                        "color": "{{theme.color.onSurfaceVariant}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "container",
+            "height": 300,
+            "padding": {
+              "left": 20,
+              "right": 20,
+              "top": 18
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "stretch",
+              "children": [
+                {
                   "type": "container",
                   "padding": {
                     "all": 16
@@ -376,7 +303,426 @@
                     "children": [
                       {
                         "type": "text",
-                        "content": "SHOTS PER HOUR — GOOD vs TARGET",
+                        "content": "LINE UPTIME",
+                        "style": {
+                          "fontSize": 11,
+                          "letterSpacing": 1.8,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      },
+                      {
+                        "type": "box",
+                        "height": 6
+                      },
+                      {
+                        "type": "gauge",
+                        "value": "{{uptime}}",
+                        "min": 0,
+                        "max": 100,
+                        "size": 190,
+                        "strokeWidth": 16,
+                        "labelFormat": "{value}%",
+                        "segments": [
+                          {
+                            "from": 0,
+                            "to": 70,
+                            "color": "{{theme.color.error}}"
+                          },
+                          {
+                            "from": 70,
+                            "to": 88,
+                            "color": "{{theme.color.warning}}"
+                          },
+                          {
+                            "from": 88,
+                            "to": 100,
+                            "color": "{{theme.color.success}}"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "height": 4
+                      },
+                      {
+                        "type": "text",
+                        "content": "Target 88 % — below that the shift owes an explanation at handover",
+                        "style": {
+                          "fontSize": 11,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      }
+                    ]
+                  },
+                  "width": 280
+                },
+                {
+                  "type": "box",
+                  "width": 16
+                },
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "container",
+                    "padding": {
+                      "all": 16
+                    },
+                    "decoration": {
+                      "color": "{{theme.color.surface}}",
+                      "borderRadius": 12,
+                      "border": {
+                        "color": "{{theme.color.outline}}",
+                        "width": 1
+                      }
+                    },
+                    "child": {
+                      "type": "linear",
+                      "direction": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "content": "SHOTS PER HOUR — GOOD vs TARGET",
+                          "style": {
+                            "fontSize": 11,
+                            "letterSpacing": 1.8,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 10
+                        },
+                        {
+                          "type": "chart",
+                          "chartType": "bar",
+                          "height": 210,
+                          "showGrid": true,
+                          "showLegend": true,
+                          "showLabels": true,
+                          "gridColor": "{{theme.color.outlineVariant}}",
+                          "labelColor": "{{theme.color.onSurfaceVariant}}",
+                          "options": {
+                            "animation": {
+                              "duration": 600
+                            },
+                            "legend": {
+                              "position": "bottom"
+                            }
+                          },
+                          "data": {
+                            "labels": "{{hours}}",
+                            "datasets": "{{series}}"
+                          },
+                          "colors": [
+                            "{{theme.color.primary}}",
+                            "{{theme.color.outline}}"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 16
+                },
+                {
+                  "type": "container",
+                  "padding": {
+                    "all": 16
+                  },
+                  "decoration": {
+                    "color": "{{theme.color.surface}}",
+                    "borderRadius": 12,
+                    "border": {
+                      "color": "{{theme.color.outline}}",
+                      "width": 1
+                    }
+                  },
+                  "child": {
+                    "type": "linear",
+                    "direction": "vertical",
+                    "children": [
+                      {
+                        "type": "text",
+                        "content": "THIS SHIFT",
+                        "style": {
+                          "fontSize": 11,
+                          "letterSpacing": 1.8,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      },
+                      {
+                        "type": "box",
+                        "height": 12
+                      },
+                      {
+                        "type": "linear",
+                        "direction": "horizontal",
+                        "children": [
+                          {
+                            "type": "expanded",
+                            "child": {
+                              "type": "text",
+                              "content": "Good shots",
+                              "style": {
+                                "fontSize": 13,
+                                "color": "{{theme.color.onSurfaceVariant}}"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{goodShots}}",
+                            "style": {
+                              "fontSize": 16,
+                              "fontFamily": "JetBrainsMono",
+                              "color": "{{theme.color.onSurface}}"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "height": 8
+                      },
+                      {
+                        "type": "linear",
+                        "direction": "horizontal",
+                        "children": [
+                          {
+                            "type": "expanded",
+                            "child": {
+                              "type": "text",
+                              "content": "Scrap",
+                              "style": {
+                                "fontSize": 13,
+                                "color": "{{theme.color.onSurfaceVariant}}"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{scrapShots}}",
+                            "style": {
+                              "fontSize": 16,
+                              "fontFamily": "JetBrainsMono",
+                              "color": "{{theme.color.error}}"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "height": 8
+                      },
+                      {
+                        "type": "linear",
+                        "direction": "horizontal",
+                        "children": [
+                          {
+                            "type": "expanded",
+                            "child": {
+                              "type": "text",
+                              "content": "Scrap rate",
+                              "style": {
+                                "fontSize": 13,
+                                "color": "{{theme.color.onSurfaceVariant}}"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{scrapRate}}",
+                            "style": {
+                              "fontSize": 16,
+                              "fontFamily": "JetBrainsMono",
+                              "color": "{{theme.color.error}}"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "height": 8
+                      },
+                      {
+                        "type": "linear",
+                        "direction": "horizontal",
+                        "children": [
+                          {
+                            "type": "expanded",
+                            "child": {
+                              "type": "text",
+                              "content": "Cycle avg",
+                              "style": {
+                                "fontSize": 13,
+                                "color": "{{theme.color.onSurfaceVariant}}"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{cycleAvg}}",
+                            "style": {
+                              "fontSize": 16,
+                              "fontFamily": "JetBrainsMono",
+                              "color": "{{theme.color.onSurface}}"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "height": 8
+                      },
+                      {
+                        "type": "linear",
+                        "direction": "horizontal",
+                        "children": [
+                          {
+                            "type": "expanded",
+                            "child": {
+                              "type": "text",
+                              "content": "Mould temp",
+                              "style": {
+                                "fontSize": 13,
+                                "color": "{{theme.color.onSurfaceVariant}}"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "content": "{{tempNow}}",
+                            "style": {
+                              "fontSize": 16,
+                              "fontFamily": "JetBrainsMono",
+                              "color": "{{theme.color.onSurface}}"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "height": 14
+                      },
+                      {
+                        "type": "container",
+                        "padding": {
+                          "all": 10
+                        },
+                        "decoration": {
+                          "color": "{{theme.color.surfaceVariant}}",
+                          "borderRadius": 8
+                        },
+                        "child": {
+                          "type": "text",
+                          "content": "{{pick}}",
+                          "style": {
+                            "fontSize": 12,
+                            "color": "{{theme.color.onSurface}}"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "width": 250
+                }
+              ]
+            }
+          },
+          {
+            "type": "container",
+            "height": 320,
+            "padding": {
+              "left": 20,
+              "right": 20,
+              "top": 16
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "stretch",
+              "children": [
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "container",
+                    "padding": {
+                      "all": 16
+                    },
+                    "decoration": {
+                      "color": "{{theme.color.surface}}",
+                      "borderRadius": 12,
+                      "border": {
+                        "color": "{{theme.color.outline}}",
+                        "width": 1
+                      }
+                    },
+                    "child": {
+                      "type": "linear",
+                      "direction": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "content": "SCRAP % — HOUR (COLUMN) BY PRESS (ROW) · tap a cell",
+                          "style": {
+                            "fontSize": 11,
+                            "letterSpacing": 1.8,
+                            "color": "{{theme.color.onSurfaceVariant}}"
+                          }
+                        },
+                        {
+                          "type": "box",
+                          "height": 10
+                        },
+                        {
+                          "type": "heatmap",
+                          "data": "{{scrapGrid}}",
+                          "rowLabels": "{{presses}}",
+                          "columnLabels": "{{hours}}",
+                          "cellSize": 34,
+                          "showValues": true,
+                          "colorRange": {
+                            "low": "{{theme.color.primaryContainer}}",
+                            "high": "{{theme.color.error}}"
+                          },
+                          "onCellTap": {
+                            "type": "state",
+                            "action": "set",
+                            "binding": "pick",
+                            "value": "{{presses[event.row]}} · {{hours[event.column]}}:00 — {{event.value}} % scrap"
+                          },
+                          "showLabels": true
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "box",
+                  "width": 16
+                },
+                {
+                  "type": "container",
+                  "padding": {
+                    "all": 16
+                  },
+                  "decoration": {
+                    "color": "{{theme.color.surface}}",
+                    "borderRadius": 12,
+                    "border": {
+                      "color": "{{theme.color.outline}}",
+                      "width": 1
+                    }
+                  },
+                  "child": {
+                    "type": "linear",
+                    "direction": "vertical",
+                    "children": [
+                      {
+                        "type": "text",
+                        "content": "MOULD TEMPERATURE (°C)",
                         "style": {
                           "fontSize": 11,
                           "letterSpacing": 1.8,
@@ -388,480 +734,808 @@
                         "height": 10
                       },
                       {
-                        "type": "chart",
-                        "chartType": "bar",
-                        "height": 210,
+                        "type": "graph",
+                        "data": "{{temps}}",
+                        "chartType": "line",
+                        "width": 296,
+                        "height": 170,
                         "showGrid": true,
-                        "showLegend": true,
                         "showLabels": true,
+                        "lineColor": "{{theme.color.primary}}",
                         "gridColor": "{{theme.color.outlineVariant}}",
-                        "labelColor": "{{theme.color.onSurfaceVariant}}",
-                        "options": {
-                          "animation": {
-                            "duration": 600
-                          },
-                          "legend": {
-                            "position": "bottom"
-                          }
-                        },
-                        "data": {
-                          "labels": "{{hours}}",
-                          "datasets": "{{series}}"
-                        },
-                        "colors": [
-                          "{{theme.color.primary}}",
-                          "{{theme.color.outline}}"
-                        ]
+                        "strokeWidth": 2
+                      },
+                      {
+                        "type": "box",
+                        "height": 6
+                      },
+                      {
+                        "type": "text",
+                        "content": "Set point 214 °C · alarm band ±6",
+                        "style": {
+                          "fontSize": 11,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      }
+                    ]
+                  },
+                  "width": 330
+                },
+                {
+                  "type": "box",
+                  "width": 16
+                },
+                {
+                  "type": "container",
+                  "padding": {
+                    "all": 16
+                  },
+                  "decoration": {
+                    "color": "{{theme.color.surface}}",
+                    "borderRadius": 12,
+                    "border": {
+                      "color": "{{theme.color.outline}}",
+                      "width": 1
+                    }
+                  },
+                  "child": {
+                    "type": "linear",
+                    "direction": "vertical",
+                    "children": [
+                      {
+                        "type": "text",
+                        "content": "WHERE IT GOES",
+                        "style": {
+                          "fontSize": 11,
+                          "letterSpacing": 1.8,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      },
+                      {
+                        "type": "box",
+                        "height": 10
+                      },
+                      {
+                        "type": "networkGraph",
+                        "nodes": "{{nodes}}",
+                        "edges": "{{edges}}",
+                        "layout": "tree",
+                        "height": 210,
+                        "width": 264,
+                        "interactive": true,
+                        "nodeColor": "{{theme.color.primary}}",
+                        "edgeColor": "{{theme.color.onSurfaceVariant}}",
+                        "labelColor": "{{theme.color.onSurface}}",
+                        "onNodeTap": {
+                          "type": "state",
+                          "action": "set",
+                          "binding": "pick",
+                          "value": "Station {{event.value}} selected"
+                        }
+                      }
+                    ]
+                  },
+                  "width": 300
+                }
+              ]
+            }
+          },
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 14,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "top": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
+              }
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "text",
+                    "content": "Scrap is counted at the gate, not at the press — a short shot found downstream still belongs to the shift that made it.",
+                    "style": {
+                      "fontSize": 13,
+                      "color": "{{theme.color.onSurfaceVariant}}"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "Hand over — {{goodShots}} good, {{scrapShots}} scrap",
+                  "variant": "elevated",
+                  "onTap": {
+                    "type": "state",
+                    "action": "set",
+                    "binding": "pick",
+                    "value": "Handover signed at {{takenAt}}"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "else": {
+      "type": "container",
+      "decoration": {
+        "color": "{{theme.color.surfaceContainerHighest}}"
+      },
+      "child": {
+        "type": "linear",
+        "direction": "vertical",
+        "crossAxisAlignment": "stretch",
+        "children": [
+          {
+            "type": "container",
+            "padding": {
+              "left": 24,
+              "right": 24,
+              "top": 20,
+              "bottom": 16
+            },
+            "decoration": {
+              "color": "{{theme.color.surface}}",
+              "border": {
+                "bottom": true,
+                "color": "{{theme.color.outline}}",
+                "width": 1
+              }
+            },
+            "child": {
+              "type": "linear",
+              "direction": "horizontal",
+              "crossAxisAlignment": "center",
+              "children": [
+                {
+                  "type": "expanded",
+                  "child": {
+                    "type": "linear",
+                    "direction": "vertical",
+                    "children": [
+                      {
+                        "type": "text",
+                        "content": "{{lineId}}",
+                        "style": {
+                          "fontSize": 12,
+                          "letterSpacing": 2.2,
+                          "color": "{{theme.color.onSurfaceVariant}}"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "content": "Shift handover report",
+                        "style": {
+                          "fontSize": 21,
+                          "fontWeight": "bold",
+                          "color": "{{theme.color.onSurface}}"
+                        }
                       }
                     ]
                   }
-                }
-              },
-              {
-                "type": "box",
-                "width": 16
-              },
-              {
-                "type": "container",
-                "padding": {
-                  "all": 16
                 },
-                "decoration": {
-                  "color": "{{theme.color.surface}}",
-                  "borderRadius": 12,
-                  "border": {
-                    "color": "{{theme.color.outline}}",
-                    "width": 1
-                  }
+                {
+                  "type": "box",
+                  "width": 8
                 },
-                "child": {
+                {
                   "type": "linear",
                   "direction": "vertical",
+                  "crossAxisAlignment": "end",
                   "children": [
                     {
                       "type": "text",
-                      "content": "THIS SHIFT",
+                      "content": "{{shift}}",
                       "style": {
-                        "fontSize": 11,
-                        "letterSpacing": 1.8,
-                        "color": "{{theme.color.onSurfaceVariant}}"
+                        "fontSize": 13,
+                        "color": "{{theme.color.onSurface}}"
                       }
                     },
                     {
-                      "type": "box",
-                      "height": 12
-                    },
+                      "type": "text",
+                      "content": "{{takenAt}}",
+                      "style": {
+                        "fontSize": 12,
+                        "color": "{{theme.color.onSurfaceVariant}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "type": "expanded",
+            "child": {
+              "type": "scrollView",
+              "children": [
+                {
+                  "type": "linear",
+                  "direction": "vertical",
+                  "crossAxisAlignment": "stretch",
+                  "children": [
                     {
-                      "type": "linear",
-                      "direction": "horizontal",
-                      "children": [
-                        {
-                          "type": "expanded",
-                          "child": {
-                            "type": "text",
-                            "content": "Good shots",
-                            "style": {
-                              "fontSize": 13,
-                              "color": "{{theme.color.onSurfaceVariant}}"
+                      "type": "container",
+                      "padding": {
+                        "left": 20,
+                        "right": 20,
+                        "top": 18
+                      },
+                      "child": {
+                        "type": "linear",
+                        "direction": "vertical",
+                        "crossAxisAlignment": "stretch",
+                        "spacing": 12,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "LINE UPTIME",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 6
+                                },
+                                {
+                                  "type": "gauge",
+                                  "value": "{{uptime}}",
+                                  "min": 0,
+                                  "max": 100,
+                                  "size": 190,
+                                  "strokeWidth": 16,
+                                  "labelFormat": "{value}%",
+                                  "segments": [
+                                    {
+                                      "from": 0,
+                                      "to": 70,
+                                      "color": "{{theme.color.error}}"
+                                    },
+                                    {
+                                      "from": 70,
+                                      "to": 88,
+                                      "color": "{{theme.color.warning}}"
+                                    },
+                                    {
+                                      "from": 88,
+                                      "to": 100,
+                                      "color": "{{theme.color.success}}"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 4
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "Target 88 % — below that the shift owes an explanation at handover",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "SHOTS PER HOUR — GOOD vs TARGET",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 10
+                                },
+                                {
+                                  "type": "chart",
+                                  "chartType": "bar",
+                                  "height": 210,
+                                  "showGrid": true,
+                                  "showLegend": true,
+                                  "showLabels": true,
+                                  "gridColor": "{{theme.color.outlineVariant}}",
+                                  "labelColor": "{{theme.color.onSurfaceVariant}}",
+                                  "options": {
+                                    "animation": {
+                                      "duration": 600
+                                    },
+                                    "legend": {
+                                      "position": "bottom"
+                                    }
+                                  },
+                                  "data": {
+                                    "labels": "{{hours}}",
+                                    "datasets": "{{series}}"
+                                  },
+                                  "colors": [
+                                    "{{theme.color.primary}}",
+                                    "{{theme.color.outline}}"
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "THIS SHIFT",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 12
+                                },
+                                {
+                                  "type": "linear",
+                                  "direction": "vertical",
+                                  "crossAxisAlignment": "start",
+                                  "spacing": 6,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "content": "Good shots",
+                                      "style": {
+                                        "fontSize": 13,
+                                        "color": "{{theme.color.onSurfaceVariant}}"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "{{goodShots}}",
+                                      "style": {
+                                        "fontSize": 16,
+                                        "fontFamily": "JetBrainsMono",
+                                        "color": "{{theme.color.onSurface}}"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "linear",
+                                  "direction": "vertical",
+                                  "crossAxisAlignment": "start",
+                                  "spacing": 6,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "content": "Scrap",
+                                      "style": {
+                                        "fontSize": 13,
+                                        "color": "{{theme.color.onSurfaceVariant}}"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "{{scrapShots}}",
+                                      "style": {
+                                        "fontSize": 16,
+                                        "fontFamily": "JetBrainsMono",
+                                        "color": "{{theme.color.error}}"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "linear",
+                                  "direction": "vertical",
+                                  "crossAxisAlignment": "start",
+                                  "spacing": 6,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "content": "Scrap rate",
+                                      "style": {
+                                        "fontSize": 13,
+                                        "color": "{{theme.color.onSurfaceVariant}}"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "{{scrapRate}}",
+                                      "style": {
+                                        "fontSize": 16,
+                                        "fontFamily": "JetBrainsMono",
+                                        "color": "{{theme.color.error}}"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "linear",
+                                  "direction": "vertical",
+                                  "crossAxisAlignment": "start",
+                                  "spacing": 6,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "content": "Cycle avg",
+                                      "style": {
+                                        "fontSize": 13,
+                                        "color": "{{theme.color.onSurfaceVariant}}"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "{{cycleAvg}}",
+                                      "style": {
+                                        "fontSize": 16,
+                                        "fontFamily": "JetBrainsMono",
+                                        "color": "{{theme.color.onSurface}}"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 8
+                                },
+                                {
+                                  "type": "linear",
+                                  "direction": "vertical",
+                                  "crossAxisAlignment": "start",
+                                  "spacing": 6,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "content": "Mould temp",
+                                      "style": {
+                                        "fontSize": 13,
+                                        "color": "{{theme.color.onSurfaceVariant}}"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "{{tempNow}}",
+                                      "style": {
+                                        "fontSize": 16,
+                                        "fontFamily": "JetBrainsMono",
+                                        "color": "{{theme.color.onSurface}}"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 14
+                                },
+                                {
+                                  "type": "container",
+                                  "padding": {
+                                    "all": 10
+                                  },
+                                  "decoration": {
+                                    "color": "{{theme.color.surfaceVariant}}",
+                                    "borderRadius": 8
+                                  },
+                                  "child": {
+                                    "type": "text",
+                                    "content": "{{pick}}",
+                                    "style": {
+                                      "fontSize": 12,
+                                      "color": "{{theme.color.onSurface}}"
+                                    }
+                                  }
+                                }
+                              ]
                             }
                           }
-                        },
-                        {
-                          "type": "text",
-                          "content": "{{goodShots}}",
-                          "style": {
-                            "fontSize": 16,
-                            "fontFamily": "JetBrainsMono",
-                            "color": "{{theme.color.onSurface}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "height": 8
-                    },
-                    {
-                      "type": "linear",
-                      "direction": "horizontal",
-                      "children": [
-                        {
-                          "type": "expanded",
-                          "child": {
-                            "type": "text",
-                            "content": "Scrap",
-                            "style": {
-                              "fontSize": 13,
-                              "color": "{{theme.color.onSurfaceVariant}}"
-                            }
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "content": "{{scrapShots}}",
-                          "style": {
-                            "fontSize": 16,
-                            "fontFamily": "JetBrainsMono",
-                            "color": "{{theme.color.error}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "height": 8
-                    },
-                    {
-                      "type": "linear",
-                      "direction": "horizontal",
-                      "children": [
-                        {
-                          "type": "expanded",
-                          "child": {
-                            "type": "text",
-                            "content": "Scrap rate",
-                            "style": {
-                              "fontSize": 13,
-                              "color": "{{theme.color.onSurfaceVariant}}"
-                            }
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "content": "{{scrapRate}}",
-                          "style": {
-                            "fontSize": 16,
-                            "fontFamily": "JetBrainsMono",
-                            "color": "{{theme.color.error}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "height": 8
-                    },
-                    {
-                      "type": "linear",
-                      "direction": "horizontal",
-                      "children": [
-                        {
-                          "type": "expanded",
-                          "child": {
-                            "type": "text",
-                            "content": "Cycle avg",
-                            "style": {
-                              "fontSize": 13,
-                              "color": "{{theme.color.onSurfaceVariant}}"
-                            }
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "content": "{{cycleAvg}}",
-                          "style": {
-                            "fontSize": 16,
-                            "fontFamily": "JetBrainsMono",
-                            "color": "{{theme.color.onSurface}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "height": 8
-                    },
-                    {
-                      "type": "linear",
-                      "direction": "horizontal",
-                      "children": [
-                        {
-                          "type": "expanded",
-                          "child": {
-                            "type": "text",
-                            "content": "Mould temp",
-                            "style": {
-                              "fontSize": 13,
-                              "color": "{{theme.color.onSurfaceVariant}}"
-                            }
-                          }
-                        },
-                        {
-                          "type": "text",
-                          "content": "{{tempNow}}",
-                          "style": {
-                            "fontSize": 16,
-                            "fontFamily": "JetBrainsMono",
-                            "color": "{{theme.color.onSurface}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "box",
-                      "height": 14
+                        ]
+                      }
                     },
                     {
                       "type": "container",
                       "padding": {
-                        "all": 10
-                      },
-                      "decoration": {
-                        "color": "{{theme.color.surfaceVariant}}",
-                        "borderRadius": 8
+                        "left": 20,
+                        "right": 20,
+                        "top": 16
                       },
                       "child": {
-                        "type": "text",
-                        "content": "{{pick}}",
-                        "style": {
-                          "fontSize": 12,
-                          "color": "{{theme.color.onSurface}}"
+                        "type": "linear",
+                        "direction": "vertical",
+                        "crossAxisAlignment": "stretch",
+                        "spacing": 12,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "SCRAP % — HOUR (COLUMN) BY PRESS (ROW) · tap a cell",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 10
+                                },
+                                {
+                                  "type": "heatmap",
+                                  "data": "{{scrapGrid}}",
+                                  "rowLabels": "{{presses}}",
+                                  "columnLabels": "{{hours}}",
+                                  "cellSize": 34,
+                                  "showValues": true,
+                                  "colorRange": {
+                                    "low": "{{theme.color.primaryContainer}}",
+                                    "high": "{{theme.color.error}}"
+                                  },
+                                  "onCellTap": {
+                                    "type": "state",
+                                    "action": "set",
+                                    "binding": "pick",
+                                    "value": "{{presses[event.row]}} · {{hours[event.column]}}:00 — {{event.value}} % scrap"
+                                  },
+                                  "showLabels": true
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "MOULD TEMPERATURE (°C)",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 10
+                                },
+                                {
+                                  "type": "graph",
+                                  "data": "{{temps}}",
+                                  "chartType": "line",
+                                  "width": 296,
+                                  "height": 170,
+                                  "showGrid": true,
+                                  "showLabels": true,
+                                  "lineColor": "{{theme.color.primary}}",
+                                  "gridColor": "{{theme.color.outlineVariant}}",
+                                  "strokeWidth": 2
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 6
+                                },
+                                {
+                                  "type": "text",
+                                  "content": "Set point 214 °C · alarm band ±6",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "container",
+                            "padding": {
+                              "all": 16
+                            },
+                            "decoration": {
+                              "color": "{{theme.color.surface}}",
+                              "borderRadius": 12,
+                              "border": {
+                                "color": "{{theme.color.outline}}",
+                                "width": 1
+                              }
+                            },
+                            "child": {
+                              "type": "linear",
+                              "direction": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "content": "WHERE IT GOES",
+                                  "style": {
+                                    "fontSize": 11,
+                                    "letterSpacing": 1.8,
+                                    "color": "{{theme.color.onSurfaceVariant}}"
+                                  }
+                                },
+                                {
+                                  "type": "box",
+                                  "height": 10
+                                },
+                                {
+                                  "type": "networkGraph",
+                                  "nodes": "{{nodes}}",
+                                  "edges": "{{edges}}",
+                                  "layout": "tree",
+                                  "height": 210,
+                                  "width": 264,
+                                  "interactive": true,
+                                  "nodeColor": "{{theme.color.primary}}",
+                                  "edgeColor": "{{theme.color.onSurfaceVariant}}",
+                                  "labelColor": "{{theme.color.onSurface}}",
+                                  "onNodeTap": {
+                                    "type": "state",
+                                    "action": "set",
+                                    "binding": "pick",
+                                    "value": "Station {{event.value}} selected"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "padding": {
+                        "left": 24,
+                        "right": 24,
+                        "top": 14,
+                        "bottom": 16
+                      },
+                      "decoration": {
+                        "color": "{{theme.color.surface}}",
+                        "border": {
+                          "top": true,
+                          "color": "{{theme.color.outline}}",
+                          "width": 1
                         }
+                      },
+                      "child": {
+                        "type": "linear",
+                        "direction": "vertical",
+                        "crossAxisAlignment": "start",
+                        "spacing": 10,
+                        "children": [
+                          {
+                            "type": "text",
+                            "content": "Scrap is counted at the gate, not at the press — a short shot found downstream still belongs to the shift that made it.",
+                            "style": {
+                              "fontSize": 13,
+                              "color": "{{theme.color.onSurfaceVariant}}"
+                            }
+                          },
+                          {
+                            "type": "button",
+                            "label": "Hand over — {{goodShots}} good, {{scrapShots}} scrap",
+                            "variant": "elevated",
+                            "onTap": {
+                              "type": "state",
+                              "action": "set",
+                              "binding": "pick",
+                              "value": "Handover signed at {{takenAt}}"
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
-                },
-                "width": 250
-              }
-            ]
-          }
-        },
-        {
-          "type": "container",
-          "height": 320,
-          "padding": {
-            "left": 20,
-            "right": 20,
-            "top": 16
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "stretch",
-            "children": [
-              {
-                "type": "expanded",
-                "child": {
-                  "type": "container",
-                  "padding": {
-                    "all": 16
-                  },
-                  "decoration": {
-                    "color": "{{theme.color.surface}}",
-                    "borderRadius": 12,
-                    "border": {
-                      "color": "{{theme.color.outline}}",
-                      "width": 1
-                    }
-                  },
-                  "child": {
-                    "type": "linear",
-                    "direction": "vertical",
-                    "children": [
-                      {
-                        "type": "text",
-                        "content": "SCRAP % — HOUR (COLUMN) BY PRESS (ROW) · tap a cell",
-                        "style": {
-                          "fontSize": 11,
-                          "letterSpacing": 1.8,
-                          "color": "{{theme.color.onSurfaceVariant}}"
-                        }
-                      },
-                      {
-                        "type": "box",
-                        "height": 10
-                      },
-                      {
-                        "type": "heatmap",
-                        "data": "{{scrapGrid}}",
-                        "rowLabels": "{{presses}}",
-                        "columnLabels": "{{hours}}",
-                        "cellSize": 34,
-                        "showValues": true,
-                        "colorRange": {
-                          "low": "{{theme.color.primaryContainer}}",
-                          "high": "{{theme.color.error}}"
-                        },
-                        "onCellTap": {
-                          "type": "state",
-                          "action": "set",
-                          "binding": "pick",
-                          "value": "{{presses[event.row]}} · {{hours[event.column]}}:00 — {{event.value}} % scrap"
-                        },
-                        "showLabels": true
-                      }
-                    ]
-                  }
                 }
-              },
-              {
-                "type": "box",
-                "width": 16
-              },
-              {
-                "type": "container",
-                "padding": {
-                  "all": 16
-                },
-                "decoration": {
-                  "color": "{{theme.color.surface}}",
-                  "borderRadius": 12,
-                  "border": {
-                    "color": "{{theme.color.outline}}",
-                    "width": 1
-                  }
-                },
-                "child": {
-                  "type": "linear",
-                  "direction": "vertical",
-                  "children": [
-                    {
-                      "type": "text",
-                      "content": "MOULD TEMPERATURE (°C)",
-                      "style": {
-                        "fontSize": 11,
-                        "letterSpacing": 1.8,
-                        "color": "{{theme.color.onSurfaceVariant}}"
-                      }
-                    },
-                    {
-                      "type": "box",
-                      "height": 10
-                    },
-                    {
-                      "type": "graph",
-                      "data": "{{temps}}",
-                      "chartType": "line",
-                      "width": 296,
-                      "height": 170,
-                      "showGrid": true,
-                      "showLabels": true,
-                      "lineColor": "{{theme.color.primary}}",
-                      "gridColor": "{{theme.color.outlineVariant}}",
-                      "strokeWidth": 2
-                    },
-                    {
-                      "type": "box",
-                      "height": 6
-                    },
-                    {
-                      "type": "text",
-                      "content": "Set point 214 °C · alarm band ±6",
-                      "style": {
-                        "fontSize": 11,
-                        "color": "{{theme.color.onSurfaceVariant}}"
-                      }
-                    }
-                  ]
-                },
-                "width": 330
-              },
-              {
-                "type": "box",
-                "width": 16
-              },
-              {
-                "type": "container",
-                "padding": {
-                  "all": 16
-                },
-                "decoration": {
-                  "color": "{{theme.color.surface}}",
-                  "borderRadius": 12,
-                  "border": {
-                    "color": "{{theme.color.outline}}",
-                    "width": 1
-                  }
-                },
-                "child": {
-                  "type": "linear",
-                  "direction": "vertical",
-                  "children": [
-                    {
-                      "type": "text",
-                      "content": "WHERE IT GOES",
-                      "style": {
-                        "fontSize": 11,
-                        "letterSpacing": 1.8,
-                        "color": "{{theme.color.onSurfaceVariant}}"
-                      }
-                    },
-                    {
-                      "type": "box",
-                      "height": 10
-                    },
-                    {
-                      "type": "networkGraph",
-                      "nodes": "{{nodes}}",
-                      "edges": "{{edges}}",
-                      "layout": "tree",
-                      "height": 210,
-                      "width": 264,
-                      "interactive": true,
-                      "nodeColor": "{{theme.color.primary}}",
-                      "edgeColor": "{{theme.color.onSurfaceVariant}}",
-                      "labelColor": "{{theme.color.onSurface}}",
-                      "onNodeTap": {
-                        "type": "state",
-                        "action": "set",
-                        "binding": "pick",
-                        "value": "Station {{event.value}} selected"
-                      }
-                    }
-                  ]
-                },
-                "width": 300
-              }
-            ]
-          }
-        },
-        {
-          "type": "container",
-          "padding": {
-            "left": 24,
-            "right": 24,
-            "top": 14,
-            "bottom": 16
-          },
-          "decoration": {
-            "color": "{{theme.color.surface}}",
-            "border": {
-              "top": true,
-              "color": "{{theme.color.outline}}",
-              "width": 1
+              ]
             }
-          },
-          "child": {
-            "type": "linear",
-            "direction": "horizontal",
-            "crossAxisAlignment": "center",
-            "children": [
-              {
-                "type": "expanded",
-                "child": {
-                  "type": "text",
-                  "content": "Scrap is counted at the gate, not at the press — a short shot found downstream still belongs to the shift that made it.",
-                  "style": {
-                    "fontSize": 13,
-                    "color": "{{theme.color.onSurfaceVariant}}"
-                  }
-                }
-              },
-              {
-                "type": "button",
-                "label": "Hand over — {{goodShots}} good, {{scrapShots}} scrap",
-                "variant": "elevated",
-                "onTap": {
-                  "type": "state",
-                  "action": "set",
-                  "binding": "pick",
-                  "value": "Handover signed at {{takenAt}}"
-                }
-              }
-            ]
           }
-        }
-      ]
+        ]
+      }
     }
   }
 }
